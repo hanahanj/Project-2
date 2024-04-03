@@ -8,6 +8,18 @@ const spotifyAPI = new SpotifyWebApi({
    secret: '027548624d7445e3b1c364c456b4ed11'
 
 });
+
+router.get('/:id', async (req, res) => {
+    try {
+      const songData = await Song.findByPk(req.params.id);
+      console.log(songData);
+      res.render('song', songData);
+    } catch (err) {
+      res.status(500).json(err);
+    }
+  });
+
+
 // /api/songs
 router.post('/', async (req, res) => {
     const { songName } = req.body;
