@@ -1,2 +1,2 @@
-DROP DATABASE IF EXISTS playlists
+
 CREATE DATABASE playlists
