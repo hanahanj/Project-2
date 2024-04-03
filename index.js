@@ -9,7 +9,7 @@ var spotify = new Spotify({
 spotify
   .search({ type: 'track', query: 'All the Small Things' })
   .then(function(response) {
-    console.log(response.tracks.items[0]);
+    console.log(response.tracks.items[0].album);
   })
   .catch(function(err) {
     console.log(err);

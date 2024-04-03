@@ -20,15 +20,17 @@ Song.init(
             allowNull: false
         },
         albumName: {
-            type: DataTypes.STRING
+            type: DataTypes.STRING,
+            allowNull: false
         },
 
 
     },
     {
         sequelize,
+        freezeTableName: true,
         underscored: true,
-        modelName: 'song',
+        modelName: 'Song',
       }
 );
 
