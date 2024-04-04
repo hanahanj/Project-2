@@ -12,10 +12,16 @@ const spotifyAPI = new SpotifyWebApi({
 router.get('/:id', async (req, res) => {
     try {
       const songData = await Song.findByPk(req.params.id);
+      if(songData){
       console.log(songData);
-      res.render('song', songData);
-    } catch (err) {
-      res.status(500).json(err);
+      res.status(201).json({ message: 'Song data logged successfully', songData });
+      } else {
+        res.status(404).json({ message: 'Song not found' });
+      }
+    //   res.render('song', songData);
+    } catch (error) {
+      console.error('Error searching for song:', error);
+      res.status(500).json({ message: 'Internal server error' });
     }
   });
 

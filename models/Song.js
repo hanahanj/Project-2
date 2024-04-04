@@ -28,7 +28,6 @@ Song.init(
     },
     {
         sequelize,
-        freezeTableName: true,
         underscored: true,
         modelName: 'Song',
       }

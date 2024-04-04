@@ -1,7 +1,7 @@
 const router = require('express').Router();
 const userRoutes = require('./userRoutes');
 const songRoutes = require('./songRoutes')
-const playlistRoutes = require('./playlistRoutes')
+const playlistRoutes  = require('./playlistRoutes')
 
 router.use('/users', userRoutes)
 router.use('/songs', songRoutes)
