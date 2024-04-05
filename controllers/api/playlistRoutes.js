@@ -10,7 +10,6 @@ router.get('/:id', async (req, res) => {
       } else {
         res.status(404).json({ message: 'Playlist not found' });
       }
-    //   res.render('song', songData);
     } catch (error) {
       console.error('Error searching for playlist:', error);
       res.status(500).json({ message: 'Internal server error' });
@@ -38,7 +37,7 @@ router.post('/', async (req, res) =>{
 router.delete('/:id', async (req, res) => {
     const { id } = req.params;
     try {
-      // Delete the song based on ID
+      // Delete the playlist based on ID
       const deletedCount = await Playlist.destroy({
         where: { id: id }
       });
