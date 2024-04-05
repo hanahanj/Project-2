@@ -1,5 +1,5 @@
 const sequelize = require('../config/connection');
-const  Playlist  = require('../models/Playlist');
+const  Playlist  = require('../models/playlist');
 
 const playlistdata = require('./playlistdata.json');
 
