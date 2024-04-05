@@ -1,0 +1,17 @@
+const sequelize = require('../config/connection');
+const  Playlist  = require('../models/Playlist');
+
+const playlistdata = require('./playlistdata.json');
+
+const seedDatabase = async () => {
+  await sequelize.sync({ force: true });
+
+  await Playlist.bulkCreate(userData, {
+    individualHooks: true,
+    returning: true,
+  });
+
+  process.exit(0);
+};
+
+seedDatabase();
