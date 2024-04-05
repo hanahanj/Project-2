@@ -6,13 +6,13 @@ router.get('/', async (req, res) => {
   try {
     const playlistData = await Playlist.findAll({
       // attributes: { exclude: ['password'] },
-      order: [['name', 'ASC']],
+      order: [['playlist_name', 'ASC']],
     });
 
-    const users = playlistData.map((project) => project.get({ plain: true }));
+    const playlists = playlistData.map((project) => project.get({ plain: true }));
 
     res.render('homepage', {
-      users,
+      playlists,
       logged_in: req.session.logged_in,
     });
   } catch (err) {
