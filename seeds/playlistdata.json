@@ -1,27 +1,33 @@
 [
     {
         "playlist_name": "Workout Mix",
-        "tag": "fitness"
+        "tag": "fitness",
+        "createdAt": "01/01/24",
+        "updatedAt": "01/01/24"
       
       },
       {
         "playlist_name": "Chill Vibes",
-        "tag": "relax"
-        
+        "tag": "relax",
+        "createdAt": "01/01/24",
+        "updatedAt": "01/01/24"
       },
       {
         "playlist_name": "Study Beats",
-        "tag": "focus"
-        
+        "tag": "focus",
+        "createdAt": "01/01/24",
+        "updatedAt": "01/01/24"
       },
       {
         "playlist_name": "Party Anthems",
-        "tag": "party"
-     
+        "tag": "party",
+        "createdAt": "01/01/24",
+        "updatedAt": "01/01/24"
       },
       {
         "playlist_name": "Road Trip Jams",
-        "tag": "travel"
-    
+        "tag": "travel",
+        "createdAt": "01/01/24",
+        "updatedAt": "01/01/24"
       }
 ]
