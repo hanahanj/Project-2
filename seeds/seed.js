@@ -6,7 +6,7 @@ const playlistdata = require('./playlistdata.json');
 const seedDatabase = async () => {
   await sequelize.sync({ force: true });
 
-  await Playlist.bulkCreate(userData, {
+  await Playlist.bulkCreate(playlistdata, {
     individualHooks: true,
     returning: true,
   });
