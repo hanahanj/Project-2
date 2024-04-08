@@ -1,5 +1,13 @@
 {{#each playlists as |playlist|}}
-{{> playlist-name}}
-{{> tag}}
+
+<div class="card">
+  <h5 class="card-title"> {{< playlist-name}}</h5>
+ 
+  <div class="card-body">
+ {{> tag}}
+  </div>
+</div>
+
+
 
 {{/each}}
