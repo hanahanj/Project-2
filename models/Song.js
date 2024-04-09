@@ -26,7 +26,7 @@ Song.init(
         playlist_id:{
             type: DataTypes.INTEGER,
             references: {
-                model:'playlists',
+                model:'playlist',
                 key: 'id',
             }
         }
@@ -35,6 +35,7 @@ Song.init(
     },
     {
         sequelize,
+        freezeTableName: true,
         underscored: true,
         modelName: 'Song',
       }

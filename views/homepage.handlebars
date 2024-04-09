@@ -28,17 +28,17 @@
     <div class="row">
       <div class="col">
         <div class="collapse multi-collapse flex-column " id="multiCollapseExample{{tag}}">
+          {{#each Songs as |songs| }}
           <div class="row align-items-start ms-1">
             <div class="col">
-              <h5>Song Name</h5>
+              <h5>{{trackName}}</h5>
             </div>
             <div class="col">
-              <h5>Artist</h5>
+              <h5>{{artistName}}</h5>
             </div>
-            {{Song}}
-            {{artist}}
           </div>
         </div>
+       {{/each}}
       </div>
     </div>
   </div>

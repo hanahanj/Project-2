@@ -39,6 +39,7 @@ Playlist.init(
     },
     {
         sequelize,
+        freezeTableName: true,
         underscored: true,
         modelName: 'playlist',
       }
