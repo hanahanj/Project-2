@@ -1,42 +1,49 @@
-{{!-- {{#each users as |user| }}
-<div class="row align-center mb-5">
-  <div class="col-md-6">
-    <h2>{{{get_emoji}}} {{user.name}}</h2>
-  </div>
-  <div class="col-md-6">
-    <h3><a href="mailto:{{user.email}}">{{user.email}}</a></h3>
-  </div>
-</div>
+
+
+{{!-- {{#each playlists as |playlist| }}
+
+  <div class=" alpha card col-12 rounded mt-3 mx-auto"">
+    <div class=" rounded alpha">
+      <div class="card-title m-4 col-8">
+      <h2>{{playlist_name}}</h2>
+      </div>
+    
+      <div class="card-body m-1 col-2">
+        <h2> {{tag}}</h2>
+      </div>
+      <div class="card-body m-1">
+        <p>{{created_at}} {{updated_at}}</p>
+      </div>
+    </div> 
+  </div> 
+
 {{/each}} --}}
 
 
-{{!-- <div class="card">
-  <h5 class="card-title"> {{> playlist-name}}</h5>
- 
-  <div class="card-body">
- {{> tag}}
-  </div>
-</div> --}}
-
 {{#each playlists as |playlist| }}
-<div class="row align-center mb-5">
-  <div class="col-md-6">
-    <h2>{{playlist_name}} {{tag}}</h2>
+  <div class=" card col-12 rounded mx-auto">
+    <div class=" rounded card-title m-3" data-bs-toggle="collapse" href="#multiCollapseExample{{tag}}" role="button" aria-expanded="false" aria-controls="multiCollapseExample1"><h2 class= "mt-1 pl-5">{{playlist_name}}</h2>
+      <p>{{tag}}</>
+    </div>
+    <div class="row">
+      <div class="col">
+        <div class="collapse multi-collapse flex-column " id="multiCollapseExample{{tag}}">
+          <div class="row align-items-start ms-1">
+            <div class="col">
+              <h5>Song Name</h5>
+            </div>
+            <div class="col">
+              <h5>Artist</h5>
+            </div>
+            {{Song}}
+            {{artist}}
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
-
-  <div class="col-md-6">
-    <h2>{{created_at}} {{updated_at}}</h2>
-  </div>
-  
-</div>
 {{/each}}
 
 
 
-{{!-- {{#each playlists as |playlist|}}
-{{{playlist_name}}}
-{{{tag}}}
-{{{created_at}}}
-{{{updated_at}}} --}}
 
-{{/each}}
