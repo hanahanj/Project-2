@@ -1,0 +1,48 @@
+.container{
+    padding-left: 0;
+}
+
+.alpha {
+    color: #006BFF;
+}
+
+
+.beta {
+    color: white;
+    
+}
+
+.playlistCard{
+    background-color: #001085;
+}
+
+.playlistCard:hover{
+    background-color: #006BFF !important;
+
+}
+.card{
+    background-color: #001085 !important;
+    color:#006BFF;
+}
+
+.bg-custom-1 {
+    background-color: #0004FF !important;
+}
+
+.card:hover{
+    background-color: #0004FF !important;
+    color:aliceblue;
+}
+
+.card-body{
+    color: white;
+}
+
+.row{
+    padding:0;
+}
+.multi-collapse:hover{
+    background-color: #006BFF !important;
+    padding:0;
+
+}
