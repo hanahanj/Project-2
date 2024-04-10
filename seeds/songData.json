@@ -2,16 +2,19 @@
 {
     "trackName": "Song 1",
     "artistName": "Artist 1",
-    "albumName": "Album 1"
+    "albumName": "Album 1",
+    "playlist_id":1
   },
   {
     "trackName": "Song 2",
     "artistName": "Artist 2",
-    "albumName": "Album 2"
+    "albumName": "Album 2",
+    "playlist_id":1
   },
   {
     "trackName": "Song 3",
     "artistName": "Artist 3",
-    "albumName": "Album 3"
+    "albumName": "Album 3",
+    "playlist_id":2
   }
 ]

@@ -1,5 +1,6 @@
 const router = require('express').Router();
 const  Playlist  = require('../models/playlist')
+const Song = require('../models/song')
 const withAuth = require('../utils/auth');
 
 router.get('/', async (req, res) => {
@@ -8,11 +9,14 @@ router.get('/', async (req, res) => {
       // attributes: { exclude: ['password'] },
       order: [['playlist_name', 'ASC']],
     });
-
+    const songData = await Song.findAll({
+      order: [['trackName', 'ASC']]
+    })
     const playlists = playlistData.map((project) => project.get({ plain: true }));
-
+    const songs = songData.map((project) => project.get({ plain: true}));
     res.render('homepage', {
       playlists,
+      songs,
       logged_in: req.session.logged_in,
     });
   } catch (err) {
