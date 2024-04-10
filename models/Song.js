@@ -25,10 +25,7 @@ Song.init(
         },
         playlist_id:{
             type: DataTypes.INTEGER,
-            references: {
-                model:'playlist',
-                key: 'id',
-            }
+            
         }
 
 

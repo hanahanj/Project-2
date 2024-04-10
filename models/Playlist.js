@@ -33,6 +33,22 @@ Playlist.init(
                 model: 'user',
                 key: 'id'
             }
+        },
+        trackName: {
+            type: DataTypes.STRING,
+            allowNull: false
+        },
+        artistName: {
+            type: DataTypes.STRING,
+            
+        },
+        trackName2: {
+            type: DataTypes.STRING,
+            allowNull: false
+        },
+        artistName2: {
+            type: DataTypes.STRING,
+            
         }
 
 
