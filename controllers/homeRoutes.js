@@ -69,7 +69,7 @@ router.post('/', async (req, res) => {
 
 router.get('/playlist/', async (req, res) => {
   try {
-   const playlistData = await Playlist.findPk(1)
+   const playlistData = await Playlist.findByPk(1)
 
    //const playlists = playlistData.map(playlist => playlist.get({plain: true}))
 
