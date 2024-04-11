@@ -1,22 +1,24 @@
 const router = require('express').Router();
 const  Playlist  = require('../models/playlist')
-const Song = require('../models/song')
+const Song = require('../models/Song')
 const withAuth = require('../utils/auth');
 
 router.get('/', async (req, res) => {
   try {
     const playlistData = await Playlist.findAll({
       // attributes: { exclude: ['password'] },
+      include: [Song],
       order: [['playlist_name', 'ASC']],
     });
-    const songData = await Song.findAll({
-      order: [['trackName', 'ASC']]
-    })
+    // const songData = await Song.findAll({
+    //   order: [['trackName', 'ASC']]
+    // })
     const playlists = playlistData.map((project) => project.get({ plain: true }));
-    const songs = songData.map((project) => project.get({ plain: true}));
+   // const songs = songData.map((project) => project.get({ plain: true}));
+   console.log(playlists)
     res.render('homepage', {
       playlists,
-      songs,
+      //songs,
       logged_in: req.session.logged_in,
     });
   } catch (err) {
@@ -24,14 +26,26 @@ router.get('/', async (req, res) => {
   }
 });
 
-// router.get('/login', (req, res) => {
-//   if (req.session.logged_in) {
-//     res.redirect('/');
-//     return;
-//   }
+// router.get('/', async (req, res) => {
+//   try {
 
-//   res.render('login');
+
+//     res.render('homepage', {
+    
+//     });
+//   } catch (err) {
+//     res.status(500).json(err);
+//   }
 // });
+
+router.get('/login', (req, res) => {
+  if (req.session.logged_in) {
+    res.redirect('/');
+    return;
+  }
+
+  res.render('login');
+});
 
 // CREATE new user
 router.post('/', async (req, res) => {
@@ -47,6 +61,23 @@ router.post('/', async (req, res) => {
 
       res.status(200).json(dbUserData);
     });
+  } catch (err) {
+    console.log(err);
+    res.status(500).json(err);
+  }
+});
+
+router.get('/playlist/', async (req, res) => {
+  try {
+   const playlistData = await Playlist.findPk(1)
+
+   //const playlists = playlistData.map(playlist => playlist.get({plain: true}))
+
+   const playlist = playlistData.get({plain: true})
+    console.log(playlist)
+
+    res.render("playlist", {playlist})
+
   } catch (err) {
     console.log(err);
     res.status(500).json(err);

@@ -23,12 +23,13 @@
 {{#each playlists as |playlist| }}
   <div class=" card col-12 rounded mx-auto">
     <div class=" rounded card-title m-3" data-bs-toggle="collapse" href="#multiCollapseExample{{tag}}" role="button" aria-expanded="false" aria-controls="multiCollapseExample1"><h2 class= "mt-1 pl-5">{{playlist_name}}</h2>
-      <p>{{tag}}</>
+      <p>{{tag}}</p>
     </div>
     <div class="row">
       <div class="col">
         <div class="collapse multi-collapse flex-column " id="multiCollapseExample{{tag}}">
           {{!-- {{#each Songs as |songs| }} --}}
+          {{#each playlist.Songs}}
           <div class="row align-items-start ms-1">
             <div class="col-6">
               <h5>{{trackName}}</h5>
@@ -39,14 +40,14 @@
             </div>
             <div class="row align-items-start ms-1">
             <div class="col-6">
-              <h5>{{trackName2}}</h5>
+              {{!-- <h5>{{trackName2}}</h5> --}}
             </div>
             <div class="col-6">
-              <h5>{{artistName2}}</h5>
+              {{!-- <h5>{{artistName2}}</h5> --}}
             </div>
           </div>
         </div>
-       {{!-- {{/each}} --}}
+        {{/each}} 
       </div>
     </div>
   </div>

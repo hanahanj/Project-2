@@ -1,9 +1,11 @@
 const router = require('express').Router();
-const Playlist = require('../../models/playlist')
+const {Playlist, Song} = require('../../models/')
 
 router.get('/:id', async (req, res) => {
     try {
-      const playlistData = await Playlist.findByPk(req.params.id);
+      const playlistData = await Playlist.findByPk(req.params.id, {
+        include: [Song]
+      });
       if(playlistData){
       console.log(playlistData);
       res.status(201).json({ message: 'Playlist data retrieved successfully', playlistData});

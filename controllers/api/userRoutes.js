@@ -2,8 +2,10 @@ const router = require('express').Router();
 const  User  = require('../../models/User');
 
 
-router.get('/', async (req, res) =>{
-  res.render('login')
+router.get('/',  (req, res) =>{
+  //res.render('login')
+  User.findAll({})
+  .then(data => res.json(data) )
 })
 
 router.post('/signup', async (req, res) =>{
@@ -16,6 +18,7 @@ router.post('/signup', async (req, res) =>{
 
     req.session.save(() =>{
       req.session.loggedIn = true;
+      req.session.user_id = dbUserData.id;
 
       res.status(200).json(dbUserData);
     });

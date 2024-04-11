@@ -37,6 +37,7 @@ router.post('/', async (req, res) => {
           trackName: track.name,
           artistName: track.artists[0].name,
           albumName: track.album.name,
+          playlist_id: 1
         });
         res.status(201).json({ message: 'Song data logged successfully', song });
       } else {
