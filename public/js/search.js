@@ -1,3 +1,5 @@
+const { response } = require("express");
+
 const loginFormHandler = async (event) => {
     event.preventDefault();
   
@@ -17,7 +19,7 @@ const loginFormHandler = async (event) => {
       }
     }
   };
-
+console.log(response)
   document
   .querySelector('#playlist-form')
   .addEventListener('submit', loginFormHandler);
