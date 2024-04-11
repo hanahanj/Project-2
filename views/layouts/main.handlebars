@@ -16,36 +16,29 @@
      Dope Playlists
     </h1>
      --}}
-    <nav class="navbar navbar-light bg-dark">
-  <span class="navbar-brand mb-0 h1  ms-5 alpha ">Dope Playlists</span>
+    <nav class="navbar navbar-light bg-light">
+  <span class="navbar-brand mb-0 h1  ms-5  ">Playlists</span>
+  <a href="/login">
+    <button class="btn" href="/login" id="login">Login</button>
+    </a>
 </nav>
+
     {{#if logged_in}}
     <nav>
       <button class="btn" id="logout">logout</button>
-       <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+       <form class="col-6 form-inline my-2 my-lg-0  mx-auto d-flex">
+      <input class="form-control mr-1 " type="search" placeholder="Search" aria-label="Search">
+      <button class="  btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
     </form>
 
     </nav>
     {{/if}}
 
-
-
-
-
-
-
-
-
-
-
-
   </header>
   <main class="container container-fluid mt-5">
-    <button class="btn" id="login">Login</button>
+    
+    
     {{{ body }}}
-  
   </main>
   <footer>
       
