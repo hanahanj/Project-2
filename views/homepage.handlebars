@@ -1,25 +1,5 @@
 
 
-{{!-- {{#each playlists as |playlist| }}
-
-  <div class=" alpha card col-12 rounded mt-3 mx-auto"">
-    <div class=" rounded alpha">
-      <div class="card-title m-4 col-8">
-      <h2>{{playlist_name}}</h2>
-      </div>
-    
-      <div class="card-body m-1 col-2">
-        <h2> {{tag}}</h2>
-      </div>
-      <div class="card-body m-1">
-        <p>{{created_at}} {{updated_at}}</p>
-      </div>
-    </div> 
-  </div> 
-
-{{/each}} --}}
-
-
 {{#each playlists as |playlist| }}
   <div class=" card col-12 rounded mx-auto">
     <div class=" rounded card-title m-3" data-bs-toggle="collapse" href="#multiCollapseExample{{tag}}" role="button" aria-expanded="false" aria-controls="multiCollapseExample1"><h2 class= "mt-1 pl-5">{{playlist_name}}</h2>

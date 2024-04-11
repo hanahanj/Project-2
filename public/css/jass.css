@@ -6,6 +6,15 @@
     color: #006BFF;
 }
 
+.alpha-bg{
+    background-color: #001085;
+}
+
+.alpha-bg2{
+    background-color: #0004FF;
+}
+
+
 
 .beta {
     color: white;
@@ -24,6 +33,11 @@
     background-color: #001085 !important;
     color:#006BFF;
 }
+
+/* .login-contain{
+    background-color: #001085 !important;
+    color:#006BFF;
+} */
 
 .bg-custom-1 {
     background-color: #0004FF !important;
@@ -44,5 +58,20 @@
 .multi-collapse:hover{
     background-color: #006BFF !important;
     padding:0;
+}
+
+
+    
+.page-title{
+     color:white;
+}
+
+.login-card{
+    color:#006BFF;
+
+}
+.login-card:hover{
+    background-color: #006BFF !important;
+    color:white;
 
 }
