@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const  Playlist  = require('../models/playlist')
+const  Playlist  = require('../models/Playlist')
 const Song = require('../models/Song')
 const withAuth = require('../utils/auth');
 
