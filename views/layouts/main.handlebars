@@ -16,22 +16,29 @@
      Dope Playlists
     </h1>
      --}}
-    <nav class="navbar navbar-light bg-light">
+    
+
+    {{#if logged_in}}
+     <nav class="navbar navbar-light bg-light">
+  <span class="navbar-brand mb-0 h1  ms-5  ">Playlists</span>
+ 
+     <form id="playlist-form" class="col-6 form-inline my-2 my-lg-0  mx-auto d-flex">
+      <input id= "playlist-id" hidden value="{{playlist_id}}"/>
+      <input id="songName"class="form-control mr-1 " type="search" placeholder="Search for Songs" aria-label="Search">
+      <button class=" btn btn-dark my-2 my-sm-0" type="submit">Add Song to Playlist</button>
+    </form>
+
+     <a href="/login">
+    <button class="btn" href="/login" id="login">Logout</button>
+    </a>
+    </nav>
+    {{else}}
+ <nav class="navbar navbar-light bg-light">
   <span class="navbar-brand mb-0 h1  ms-5  ">Playlists</span>
   <a href="/login">
     <button class="btn" href="/login" id="login">Login</button>
     </a>
 </nav>
-
-    {{#if logged_in}}
-    <nav>
-      <button class="btn" id="logout">logout</button>
-       <form class="col-6 form-inline my-2 my-lg-0  mx-auto d-flex">
-      <input class="form-control mr-1 " type="search" placeholder="Search" aria-label="Search">
-      <button class="  btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-    </form>
-
-    </nav>
     {{/if}}
 
   </header>
@@ -50,3 +57,5 @@
 </body>
 
 </html>
+
+<script src="/js/search.js"></script>

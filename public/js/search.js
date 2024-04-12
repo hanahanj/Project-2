@@ -1,4 +1,3 @@
-const { response } = require("express");
 
 const loginFormHandler = async (event) => {
     event.preventDefault();
@@ -8,7 +7,7 @@ const loginFormHandler = async (event) => {
     if (playlist) {
       const response = await fetch('/api/songs', {
         method: 'POST',
-        body: JSON.stringify({ songName:playlist }),
+        body: JSON.stringify({ songName:playlist}),
         headers: { 'Content-Type': 'application/json' },
       });
   
@@ -19,7 +18,7 @@ const loginFormHandler = async (event) => {
       }
     }
   };
-console.log(response)
+
   document
   .querySelector('#playlist-form')
   .addEventListener('submit', loginFormHandler);

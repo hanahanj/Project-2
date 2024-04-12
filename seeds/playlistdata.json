@@ -10,45 +10,5 @@
         "artistName2": "Artist 2"
 
 
-      },
-      {
-        "playlist_name": "Chill Vibes",
-        "tag": "relax",
-        "created_at": "01/01/24",
-        "updated_at": "01/01/24",
-        "trackName": "Song 1",
-        "artistName": "Artist 1",
-        "trackName2": "Song 2",
-        "artistName2": "Artist 2"
-      },
-      {
-        "playlist_name": "Study Beats",
-        "tag": "focus",
-        "created_at": "01/01/24",
-        "updated_at": "01/01/24",
-        "trackName": "Song 1",
-        "artistName": "Artist 1",
-        "trackName2": "Song 2",
-        "artistName2": "Artist 2"
-      },
-      {
-        "playlist_name": "Party Anthems",
-        "tag": "party",
-        "created_at": "01/01/24",
-        "updated_at": "01/01/24",
-        "trackName": "Song 1",
-        "artistName": "Artist 1",
-        "trackName2": "Song 2",
-        "artistName2": "Artist 2"
-      },
-      {
-        "playlist_name": "Road Trip Jams",
-        "tag": "travel",
-        "created_at": "01/01/24",
-        "updated_at": "01/01/24",
-        "trackName": "Song 1",
-        "artistName": "Artist 1",
-        "trackName2": "Song 2",
-        "artistName2": "Artist 2"
       }
-]
+    ]

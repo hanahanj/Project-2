@@ -28,13 +28,13 @@ const user = await User.bulkCreate(userData, {
 
 
 
-  for (const song of songData) {
-   await Song.create({
-      ...song,
-      // Attach a random playlist ID to each song
-      //playlist_id: playlistData[Math.floor(Math.random() * playlistData.length)].id,
-    });
-  }
+  // for (const song of songData) {
+  //  await Song.create({
+  //     ...song,
+  //     // Attach a random playlist ID to each song
+  //     //playlist_id: playlistData[Math.floor(Math.random() * playlistData.length)].id,
+  //   });
+  // }
 
   process.exit(0);
 };

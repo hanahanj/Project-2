@@ -7,27 +7,19 @@
     </div>
     <div class="row">
       <div class="col">
-        <div class="collapse multi-collapse flex-column " id="multiCollapseExample{{tag}}">
+        <div class="collapse multi-collapse  " id="multiCollapseExample{{tag}}">
           {{!-- {{#each Songs as |songs| }} --}}
+          <div class="row  ms-1 d-flex flex-wrap">
           {{#each playlist.Songs}}
-          <div class="row align-items-start ms-1">
-            <div class="col-6">
+            <div class="col-5 d-flex flex-wrap">
               <h5>{{trackName}}</h5>
             </div>
-            <div class="col-6">
+            <div class="col-5 d-flex flex-wrap">
               <h5>{{artistName}}</h5>
             </div>
-            </div>
-            <div class="row align-items-start ms-1">
-            <div class="col-6">
-              {{!-- <h5>{{trackName2}}</h5> --}}
-            </div>
-            <div class="col-6">
-              {{!-- <h5>{{artistName2}}</h5> --}}
-            </div>
-          </div>
-        </div>
         {{/each}} 
+         </div>
+        </div>
       </div>
     </div>
   </div>
