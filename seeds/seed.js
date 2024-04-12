@@ -9,7 +9,7 @@ const userData = require('./userData.json')
 
 const seedDatabase = async () => {
   await sequelize.sync({ force: true });
-
+// console.log("seedDatabase");
 const user = await User.bulkCreate(userData, {
     individualHooks: true,
     returning: true,
@@ -36,7 +36,8 @@ const user = await User.bulkCreate(userData, {
   //   });
   // }
 
-  process.exit(0);
 };
 
 seedDatabase();
+
+module.exports = seedDatabase;

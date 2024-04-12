@@ -2,6 +2,7 @@ const router = require('express').Router();
 const  Playlist  = require('../models/Playlist')
 const Song = require('../models/Song')
 const withAuth = require('../utils/auth');
+// const seedDatabase= require('../seeds/seed');
 
 router.get('/', async (req, res) => {
   try {
@@ -84,6 +85,17 @@ router.get('/playlist/', async (req, res) => {
   }
 });
 
+// router.post('/seed', async (req, res) => {
+//   try{
+//     seedDatabase();
+//   }
+//   catch(err){
+//     console.log(err);
+//     res.status(500).json(err);
+//   }
+// })
+
 module.exports = router;
+
 
 // leveraged from unit 14 section 23
