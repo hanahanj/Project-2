@@ -30,7 +30,7 @@ router.post('/', async (req, res) =>{
         } else {
         res.status(404).json({ message: 'Error creating playlist' });
          }
-        } catch {
+        } catch (err) {
         console.error('Error creating playlist:', err);
         res.status(500).json({ message: 'Internal server error' });
           }
