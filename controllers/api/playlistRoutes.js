@@ -23,6 +23,12 @@ router.post('/', async (req, res) =>{
         const PlaylistData = await Playlist.create({
            playlist_name: req.body.playlist_name,
            tag: req.body.tag,
+           created_at: req.body.created_at,
+           updated_at: req.body.updated_at,
+           trackName: req.body.trackName,
+           artistName: req.body.artistName,
+           trackName2: req.body.trackName2,
+           artistName2: req.body.artistName2
         })
         if (PlaylistData){
         console.log(PlaylistData);
