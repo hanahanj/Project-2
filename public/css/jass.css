@@ -14,10 +14,13 @@
     background-color: #0004FF;
 }
 
+.song-submit:hover{
+    background-color: #006BFF !important;
+}
 
 
 .beta {
-    color: white;
+    color: white !important;
     
 }
 
@@ -31,7 +34,7 @@
 }
 .card{
     background-color: #001085 !important;
-    color:#006BFF;
+    color:white;
 }
 
 /* .login-contain{
