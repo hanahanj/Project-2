@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>User Registry</title>
+  <title>Playlists</title>
   <link rel="stylesheet" href="/css/jass.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
@@ -19,24 +19,24 @@
     
 
     {{#if logged_in}}
-     <nav class="navbar navbar-light bg-light">
-  <span class="navbar-brand mb-0 h1  ms-5  ">Playlists</span>
+     <nav class="navbar navbar-light pt-3 pb-3 ps-5 alpha-bg">
+  <span class="mb-0 h1  ms-5 beta ">Playlists</span>
  
      <form id="playlist-form" class="col-6 form-inline my-2 my-lg-0  mx-auto d-flex">
       <input id= "playlist-id" hidden value="{{playlist_id}}"/>
       <input id="songName"class="form-control mr-1 " type="search" placeholder="Search for Songs" aria-label="Search">
-      <button class=" btn btn-dark my-2 my-sm-0" type="submit">Add Song to Playlist</button>
+      <button class=" song-submit btn btn-dark my-2 my-sm-0" type="submit">Add Song to Playlist</button>
     </form>
 
      <a href="/login">
-    <button class="btn" href="/login" id="login">Logout</button>
+    <button class="beta btn " href="/login" id="logout">Logout</button>
     </a>
     </nav>
     {{else}}
- <nav class="navbar navbar-light bg-light">
-  <span class="navbar-brand mb-0 h1  ms-5  ">Playlists</span>
+ <nav class="navbar navbar-light pt-3 pb-3 ps-5 bg-light">
+  <span class="mb-0 h1  ms-5  ">Playlists</span>
   <a href="/login">
-    <button class="btn" href="/login" id="login">Login</button>
+    <button class="btn pr-5 " href="/login" id="login">Login</button>
     </a>
 </nav>
     {{/if}}
