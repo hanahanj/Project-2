@@ -1,4 +1,4 @@
-const Playlist = require('./playlist');
+const Playlist = require('./Playlist');
 const Song = require('./Song');
 const User = require('./User');
 
