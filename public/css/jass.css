@@ -32,9 +32,10 @@
     background-color: #006BFF !important;
 
 }
-.card{
-    background-color: #001085 !important;
-    color:white;
+.logIn{
+    background-color: #001085 !important ;
+    color: white;
+    /* color:white; */
 }
 
 /* .login-contain{
@@ -46,8 +47,14 @@
     background-color: #0004FF !important;
 }
 
-.card:hover{
+
+.logIn:hover{
     background-color: #0004FF !important;
+    color:aliceblue;
+}
+
+.logOut:hover{
+    background-color:#808080;
     color:aliceblue;
 }
 
@@ -58,8 +65,8 @@
 .row{
     padding:0;
 }
-.multi-collapse:hover{
-    background-color: #006BFF !important;
+.playlistSong:hover{
+    background-color: #d3d3d3!important;
     padding:0;
 }
 
@@ -76,5 +83,14 @@
 .login-card:hover{
     background-color: #006BFF !important;
     color:white;
+
+}
+
+.logout{
+    background-color: white !important;
+    color:black !important;
+}
+
+.logIn{
 
 }
